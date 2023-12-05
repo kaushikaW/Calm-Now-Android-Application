@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#002C55"
+    tools:context=".Home">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+        <RelativeLayout
+
+
+            android:id="@+id/main_container"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <RelativeLayout
+
+                android:id="@+id/mainWall"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sunset"
+                    android:id="@+id/welcomeWall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <VideoView
+                    android:id="@+id/welcomeAnimation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/welcomeNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainWall"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+
+                    android:id="@+id/sensor_dash_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_card"
+                    android:padding="10dp">
+
+                    <TextView
+
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Room brightness level"
+                        android:textColor="#F4FF81"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="10dp" />
+
+                    <TextView
+                        android:id="@+id/bri_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView2"
+                        android:layout_marginTop="10dp"
+                        android:text="89 lux"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                    <TextView
+
+                        android:id="@+id/state_label2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bri_val"
+                        android:text="Bad"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/textView93"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/state_label2"
+                        android:layout_marginTop="50dp"
+                        android:text="Learn more"
+                        android:textColor="#F8F8F8"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="203dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/bedTimeDashBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_card"
+                    android:padding="10dp">
+
+                    <TextView
+
+                        android:id="@+id/bedTimeDashBoardTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your total Zen points"
+                        android:textColor="#F4FF81"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="10dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/cc2"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/bedTimeDashBoardTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/zenPoints"
+                            android:layout_centerVertical="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textSize="40dp" />
+
+                        <ImageView
+                            android:layout_marginLeft="80dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/points" />
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_marginTop="20dp"
+                        android:text="Do breathing exercises to earn more zen points"
+                        android:layout_below="@+id/cc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="480dp">
+
+                <androidx.cardview.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/breathing_button"
+                    app:cardCornerRadius="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    >
+
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:src="@drawable/brething_card_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="160dp"
+                        android:textSize="19dp"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Try some breathing exercisers "/>
+
+                    <TextView
+                        android:layout_marginTop="190dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Breathing exercisers reduce your depression, anxiety"/>
+
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

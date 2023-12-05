@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About"
+    android:background="#002C55">
+
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/interbold"
+        android:text="About"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        />
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:background="@drawable/sounds_second_background"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:id="@+id/row1"
+            android:layout_below="@id/textView_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/userIdLabel"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:textSize="20dp"
+                android:text="User ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_below="@+id/userIdLabel"
+                android:id="@+id/userID"
+                android:textSize="15dp"
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:padding="10dp"
+            android:background="@drawable/sounds_second_background"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:id="@+id/row2"
+            android:layout_below="@id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/emailRegLabel"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:textSize="20dp"
+                android:text="Registered Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_below="@+id/emailRegLabel"
+                android:id="@+id/emailReg"
+                android:textSize="15dp"
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:background="@drawable/sounds_second_background"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:id="@+id/row3"
+            android:layout_below="@id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/appLabel"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:textSize="20dp"
+                android:text="App version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_below="@+id/appLabel"
+                android:textSize="15dp"
+                android:text="1.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

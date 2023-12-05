@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <ImageView
+
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/calm"
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+
+    </ImageView>
+
+    <TextView
+        android:fontFamily="@font/curs"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:text="Calm Now"
+        android:layout_below="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+
+        android:textStyle="bold"
+        android:id="@+id/mainLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="Create An Account"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainLabel"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/container_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:id="@+id/fname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                app:errorEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fname_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginLeft="5dp"
+
+                android:layout_weight="1"
+                android:layout_toEndOf="@id/fname"
+                android:id="@+id/lname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                app:errorEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/lname_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/container_names"
+            android:id="@+id/emailNew"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:errorEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailNew_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/passwordContainer"
+            android:layout_below="@+id/emailNew"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:passwordToggleEnabled="true"
+                android:paddingRight="5dp"
+                android:layout_weight="1"
+                android:id="@+id/passwordNew"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                app:errorEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:inputType="textPassword"
+                    android:id="@+id/passwordNew_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:paddingLeft="5dp"
+                android:layout_weight="1"
+                android:layout_toEndOf="@id/passwordNew"
+                android:id="@+id/rePassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Re-Enter Password"
+                app:passwordToggleEnabled="true"
+
+                app:errorEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:inputType="textPassword"
+                    android:id="@+id/rePassword_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        style="@style/Widget.Material3.Button"
+        android:layout_marginTop="10dp"
+        android:id="@+id/register_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/container"
+        android:text="Register" />
+
+
+    <TextView
+        android:textSize="19dp"
+        android:id="@+id/NotYet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_button"
+        android:layout_marginTop="50dp"
+        android:text="Not yet a member ?"
+        android:textAlignment="center" />
+    <TextView
+        android:background="?attr/selectableItemBackground"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_below="@id/NotYet"
+        android:id="@+id/click_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click here to login"
+        android:textAlignment="center" />
+
+</RelativeLayout>

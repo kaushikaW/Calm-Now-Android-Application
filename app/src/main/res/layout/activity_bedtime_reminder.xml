@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BedtimeReminder"
+    android:background="#002C55">
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:textAlignment="center"
+        android:id="@+id/bedtime_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/interbold"
+        android:text="Set bed time reminder"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        />
+
+        <TextView
+
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="50dp"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:text="0"
+            android:id="@+id/bedTime"
+            android:layout_below="@id/bedtime_lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Select time"
+            android:layout_below="@id/bedTime"
+            android:id="@+id/selectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="Set alarm"
+            android:layout_below="@id/selectTime"
+            android:id="@+id/SetAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="Cancel alarm"
+            android:layout_below="@id/SetAlarm"
+            android:id="@+id/cancelAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
